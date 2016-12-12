@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # By Jon Dehdari, 2016
 # Comments by Adam Varga
-"""
-Implements simple perceptron algorithm.
+"""Implements simple perceptron training and classification algorithm.
 
+Can be used for various classification tasks. To run the example script type:
+python3 -i perceptron.py
 
 """
 
@@ -35,6 +36,8 @@ class Perceptron(list):
         params: weight matrix to train
         bias: bias term determining the offset
         learning_rate: what learning rate to use during training
+        
+    Usage example:
 
     >>> fig = plt.figure()
     >>> subplot = fig.add_subplot(1,1,1, xlim=(-5,5), ylim=(-5,5))
@@ -185,6 +188,12 @@ class Perceptron(list):
 
 
 def main():
+    """Main function.
+    
+    Creates example data sets then performs training while monitoring the
+    accuracy and plotting intermediate and final decision boundaries.
+    """
+    
     import doctest
     doctest.testmod()  # Test the code snippet in the docstring
 
